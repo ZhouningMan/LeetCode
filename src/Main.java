@@ -1,7 +1,7 @@
-import tree_graph.ConstructQuadTree;
+import array_string.MostCommonWord;
 
 public class Main {
     public static void main(String[] args) {
-        ConstructQuadTree.test();
+        MostCommonWord.test();
     }
 }
