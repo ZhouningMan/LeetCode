@@ -23,7 +23,7 @@ public class NumMatrix {
 //        }
 //    }
 //
-//    public void update(int row, int col, int val) {
+//    public void update(int row, int col, int freq) {
 //
 //    }
 //

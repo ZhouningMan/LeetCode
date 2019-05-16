@@ -19,7 +19,7 @@ public class SerializeAndDeerializeBinaryTree {
 //            if (node == NULL_NODE) {
 //                sb.append("null,");
 //            } else {
-//                sb.append(node.val).append(',');
+//                sb.append(node.freq).append(',');
 //                queue.offer(translate(node.left));
 //                queue.offer(translate(node.right));
 //            }

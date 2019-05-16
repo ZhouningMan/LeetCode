@@ -1,7 +1,7 @@
-import array_string.MostCommonWord;
+import math.BasicCalculatorII;
 
 public class Main {
     public static void main(String[] args) {
-        MostCommonWord.test();
+        BasicCalculatorII.test();
     }
 }

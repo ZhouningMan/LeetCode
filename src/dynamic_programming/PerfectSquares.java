@@ -11,6 +11,7 @@ public class PerfectSquares {
         for(int i = 1; i <=n; ++i) {
             //don't do j*j < i, that could overflow.
             for(int j = 1; j <= i/j; ++j) {
+                //cost function.
                 dp[i] = Math.min(dp[i], dp[i - j*j] + 1);
             }
         }
