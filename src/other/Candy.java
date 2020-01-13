@@ -3,6 +3,7 @@ package other;
 import java.util.*;
 
 public class Candy {
+
     public int candy(int[] ratings) {
         int[] candies = new int[ratings.length]; //initialize to 0;
         Arrays.fill(candies, 1);
@@ -42,6 +43,7 @@ public class Candy {
                 queue.offer(n);
             }
         }
+
     }
 
     public static void test() {

@@ -1,29 +1,29 @@
 package array_string;
 
-import java.util.*;
-import java.util.stream.Collector;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class IntersectionOfTwoArray {
+    /**
+     * @param nums1: an integer array
+     * @param nums2: an integer array
+     * @return: an integer array
+     */
     public int[] intersection(int[] nums1, int[] nums2) {
-        Map<Integer, Integer> num1Frequency = new HashMap<>();
-        for(int num : nums1) {
-            num1Frequency.compute(num, (key, val) -> val == null ? 1 : val + 1);
+        Set<Integer> set1 = Arrays.stream(nums1).boxed().collect(Collectors.toSet());
+        Set<Integer> commons = new HashSet<>();
+        for(int n : nums2) {
+            if(set1.contains(n)) {
+                commons.add(n);
+            }
         }
-
-        ArrayList<Integer> intersection = new ArrayList<>();
-        for(int num : nums2) {
-            num1Frequency.computeIfPresent(num, (key, val) -> {
-                intersection.add(num);
-                return val == 1? null : val - 1;
-            });
+        int[] ans = new int[commons.size()];
+        int i = 0;
+        for(int n : commons) {
+            ans[i++] = n;
         }
-        int[] result = new int[intersection.size()];
-        for(int i = 0; i < intersection.size(); ++i) {
-            result[i] = intersection.get(i);
-        }
-        return result;
+        return ans;
     }
 }

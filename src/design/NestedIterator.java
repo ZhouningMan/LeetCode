@@ -24,6 +24,7 @@ public class NestedIterator implements Iterator<Integer> {
             childIterator = Collections.emptyIterator();
         }
     }
+
     private Iterator<Integer> createChildIterator(Iterator<NestedInteger> iterator) {
         while(iterator.hasNext()) {
             Iterator<Integer> nestedItr;

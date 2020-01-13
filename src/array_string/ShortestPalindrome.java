@@ -43,4 +43,8 @@ public class ShortestPalindrome {
         sb.reverse();
         return sb + shortestPalindrome(s.substring(0,i)) + s.substring(i);
     }
+
+    public static void test() {
+        new ShortestPalindrome().shortestPalindrome2("abxyzba");
+    }
 }
